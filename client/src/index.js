@@ -1,8 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import reducer from './reducers';
+import asyncAwait from 'redux-async-await';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+const store = applyMiddleware(asyncAwait)(createStore)(reducer);
+
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>, document.getElementById('root'));
