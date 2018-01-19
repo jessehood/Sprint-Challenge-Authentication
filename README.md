@@ -15,8 +15,14 @@
 ## Questions - Self Study - You can exercise your Google-Fu for this and any other _Sprint Challenge_ in the future.
 
 1. Describe Middleware, Sessions (as we know them in express), bcrypt and JWT.
+  * Middleware modifies the request before the request handler is called.
+  * Sessions are persisted data on the request object based on who is making the request.
+  * Bcrypt hashes an input based on a given algorithm and salt and returns a hashed string that cannot be reversed into the original input.
+  * JWT - a token generated based on an algorithm that is used for authentication.
 1. What does bcrypt do in order to prevent attacks?
+  * Bcrypt uses salting to make the use of rainbow tables much more difficult.
 1. What are the three parts of the JSON Web Token?
+  * Header, Payload, Signature
 
 ## Project Description - User Management System - Jokes On YoU!
 
